@@ -1,0 +1,71 @@
+### teste de buscar venda por ID
+POST http://localhost:40000/Login HTTP/1.1
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzQ3ODI5NzksInVzZXJuYW1lIjoicXdlIn0.SlYYCm8J6wlpb3i1jJcSvhSz6VjwKvzPOxza8P6-hzo
+
+{    
+    "username": "qwe",
+    "password": "qwe"
+}
+
+
+### teste de buscar todos os vendas
+GET http://localhost:40000/getAllVendas HTTP/1.1
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzQ3ODI5NzksInVzZXJuYW1lIjoicXdlIn0.SlYYCm8J6wlpb3i1jJcSvhSz6VjwKvzPOxza8P6-hzo
+
+{    
+    
+}
+
+### teste de buscar venda por ID
+POST http://localhost:40000/getVendaByID HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InF3ZSIsImlhdCI6MTcwMDU3NjMwNCwiZXhwIjoxNzAwNTc2OTA0fQ.GkWeqe3GXICtuJldWwlrj3LCEphlhDFU_Gwfk-PvtBU
+
+
+{    
+    "vendasid": 2
+}
+
+### teste de inserção de venda
+POST http://localhost:40000/insertVendas HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InF3ZSIsImlhdCI6MTcwMDU3NjMwNCwiZXhwIjoxNzAwNTc2OTA0fQ.GkWeqe3GXICtuJldWwlrj3LCEphlhDFU_Gwfk-PvtBU
+
+{    
+    "vendasid": 2,
+    "codigodebarras": "5151",
+    "produto": "tomate",
+    "descricao": "quilo de tomate",
+    "valor": 10000,
+    "datavenda": "1999-12-12",
+    "vendedorid": 1,
+    "deleted": false
+}
+
+### teste de atualização de venda
+POST http://localhost:40000/UpdateVendas HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InF3ZSIsImlhdCI6MTcwMDU3NjMwNCwiZXhwIjoxNzAwNTc2OTA0fQ.GkWeqe3GXICtuJldWwlrj3LCEphlhDFU_Gwfk-PvtBU
+
+{    
+    "vendasid": "2",
+    "codigodebarras": "321312",
+    "produto": "abobora2",
+    "descricao": "ewqeqw",
+    "valor": "2.13",
+    "datavenda": "2023-11-23",
+    "vendedorid": "1",
+    "deleted": false,
+    "nome": "joao"
+}
+
+### teste de atualização de venda
+POST http://localhost:40000/DeleteVendas HTTP/1.1
+content-type: application/json
+Authorization: Bearer Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InF3ZSIsImlhdCI6MTY5OTQ1MDE5NywiZXhwIjoxNjk5NDUwNzk3fQ.sVmV_N9LUBh-9TDxjixMciktyPCAzV9holAOTISHeSY
+
+{    
+    "vendasid": 5  
+}

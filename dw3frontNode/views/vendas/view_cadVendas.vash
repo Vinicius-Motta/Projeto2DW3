@@ -1,0 +1,174 @@
+@html.extend('layout', function(model){
+
+@html.block('content', function(model){
+
+
+<main>
+
+    <div class="container-fluid px-4">
+        <h1 class="mt-2">@model.title</h1>
+        <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item active">@model.title</li>
+        </ol>
+        <div class="row">
+            <div class="col-xl-12">
+
+                <div class="card-header">
+
+                </div>
+
+                <div class="card-body">
+                    <div class="col-xl-5">
+                        <form  id="form">
+                            <div class="mb-1" style="display: none">
+                                <input type="text" name="vendasid" value="@model.data.vendasid" class="form-control" id="vendasid">
+                            </div>
+                            <div class="mb-1">
+                                <label for="codigodebarras" class="form-label">Código de barras</label>
+                                <input type="text" name="codigodebarras" value="@model.data.codigodebarras" class="form-control"
+                                    id="codigodebarras" @(model.oper=='v' ? 'disabled' : '' )>
+                            </div>
+
+                            <div class="mb-1">
+                                <label for="produto" class="form-label">Produto</label>
+                                <input type="text" name="produto" value="@model.data.produto" class="form-control" id="produto"
+                                    @(model.oper=='v' ? 'disabled' : '' )>
+                            </div>
+
+                            <div class="mb-1">
+                                <label for="descricao" class="form-label">Descrição</label>
+                                <input type="text" name="descricao" value="@model.data.descricao" class="form-control"
+                                    id="descricao" @(model.oper=='v' ? 'disabled' : '' )>
+                            </div>
+
+                            <div class="mb-1">
+                                <label for="valor" class="form-label">Valor</label>
+                                <input type="text" name="valor" value="@model.data.valor"
+                                    class="form-control" id="valor" data-thousands="." data-decimal=","
+                                    @(model.oper=='v' ? 'disabled' : '' )>
+                            </div>
+
+                            <div class="mb-1">
+                                <label for="" class="form-label">Vendedor</label>
+                                <select class="form-select" aria-label="Default select example" id="vendedorid"
+                                    @(model.oper=='v' ? 'disabled' : '' ) name="vendedorid">
+                                    @model.vendedor.forEach(function(item){
+                                    @if(model.data.vendedorid === item.vendedorid) {
+                                    <option value="@item.vendedorid" selected>@item.nome</option>
+                                    } else {
+                                    <option value="@item.vendedorid">@item.nome</option>
+                                    }
+                                    });
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="datavenda" class="form-label">Data venda <span
+                                        style="color: red;">*</span></label>
+                                <input type="date" name="datavenda" value="@model.data.datavenda"
+                                    class="form-control" id="datavenda" @(model.oper=='v' ? 'disabled' : '' )>
+                            </div>
+
+                            @if (model.oper=="c") {
+                            <button type="submit" class="btn btn-success me-2" onclick=""
+                                formmethod="POST">Salvar</button>
+                            }
+
+                        </form>
+                        <div>
+                            @if (model.oper=="vu") {
+                            <button type="button" class="btn btn-warning me-2 mb-3" onclick="alteraRegistro()">Salvar
+                                Alteração</button>
+                            }
+
+                            @if (model.oper=="v") {
+                            <button type="button" class="btn btn-warning me-2 mb-3"
+                                onclick="window.open('/vendas/viewVendas/' + $('#vendasid').val() + '/vu', '_self')">Alterar</button>
+                            }
+
+                            @if (model.oper=="v") {
+                            <button type="" class="btn btn-danger mb-3" onclick="deleteVendas()">Remover</button>
+                            }
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="window.location.href = '/vendas'">Fechar
+                            sem salvar</button>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+})
+
+})
+
+<script>
+
+    $(function () {
+        $('#valor').maskMoney();
+    })
+
+    $('#form').on('submit', function () {
+        if ($('#datavenda').val() == "") {
+            // $('#errormessage').html("Please provide at least an email ");
+            alert("Informe a data da venda");
+            return false;
+        } else {
+            $('#valor').val($('#valor').maskMoney('unmasked')[0]);
+            return true;
+        }
+    });
+
+    async function alteraRegistro() {
+        // event.preventDefault();        
+        resp = await axios.post("/vendas/viewVendas", {
+            vendasid: $("#vendasid").val(),
+            codigodebarras: $("#codigodebarras").val(),
+            produto: $("#produto").val(),
+            descricao: $("#descricao").val(),
+            valor: $('#valor').maskMoney('unmasked')[0], //Retira a formatação de money
+            datavenda: $("#datavenda").val(),
+            vendedorid: $("#vendedorid").val(),
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        //console.log("[view_cadVendas.vash|alteraRegistro] valor resp:", resp.data.status);
+        if (resp.data.status == "ok") {
+            alert("Venda alterada com sucesso!");
+        } else {
+            alert("Houve erro ao alterar os dados das vendas!");
+        }
+    }
+
+    async function deleteVendas(codigodebarrasPar) {
+        resp = await axios.post("/vendas/DeleteVendas", {
+            id: $("#vendasid").val(),
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        if (resp.data.status == "ok") {
+            alert("Venda removida com sucesso!");
+            window.open("/vendas", "_self");
+        } else {
+            alert("Houve erro ao remover os dados das vendas!");
+        }
+    }
+
+    async function testeFormData() {
+        const form = document.getElementById("form");
+        const formData = new FormData(form);          
+
+        // for (const [key, value] of formData) {
+        //     console.log("Valores:" + `${key}: ${value}`);
+        // }
+
+        console.log("Código de barras: ", formData.get("codigodebarras")); 
+    }
+</script>

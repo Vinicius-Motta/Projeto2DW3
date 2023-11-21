@@ -1,0 +1,95 @@
+@html.extend('layout', function(model){
+
+    @html.block('content', function(model){
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e9f3ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bemv {
+      background: linear-gradient(68.15deg, #04b39dda 16.62%, #1e8a7dda 85.61%);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      border-radius: 5px;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f7f7f7;
+      box-shadow: 0 0 10px rgba(30, 138, 125, 0.9);
+      border-radius: 5px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 20px;
+      color: black
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+  </style>
+  <header>
+    
+  </header>
+  <section>
+    <div class="bemv">
+      <h1>Bem-vindo ao Sistema de Controle de Vendas</h1>
+    </div>
+    <h2>Visão Geral do Sistema</h2>
+    <p>O Sistema de Controle de Vendas é uma ferramenta poderosa e intuitiva para auxiliar você e sua empresa a gerenciar as suas vendas. Com ele, você pode realizar diversas tarefas, incluindo:</p>
+    <ul>
+      <li>Registrar seus vendedores de forma rápida e intuitiva;</li>
+      <li>Com a funcionalidade de registro de vendas, você pode inserir facilmente os detalhes de cada venda realizada;</li>
+      <li>Editar ou excluir registros existentes;</li>
+      <li>Gerar relatórios, proporcionando uma visão abrangente das atividades de vendas e ajudando na análise de desempenho;</li>
+      <li>E muito mais!</li>
+    </ul>
+
+    <h2>Como Utilizar o Sistema</h2>
+    <p>Para começar a utilizar o Sistema de Controle de Vendas, siga os passos simples abaixo:</p>
+    <ol>
+      <li>Acesse o sistema com seu nome de usuário e senha.</li>
+      <li>Primeiramente, cadastre seus Vendedores. </li>
+        <ul>
+          <li>Clique em "Gerenciamento de Vendas" para visualizar as opções</li>
+          <li>Clique em "Vendedores"</li>
+          <li>Em seguida, clique em "Manutenção de vendedores" para visualizar seus vendedores cadastrados.</li>
+          <li>Para adicionar um novo vendedor, clique em "Novo Vendedor".</li>
+          <li>Para visualizar as informações do vendedor, clique em "Visualizar".</li>
+          <li>Você pode editar ou excluir vendedores a qualquer momento na seção de vizualização de vendedores.</li>
+        </ul>
+      <li>Em seguida, cadastre as vendas realizadas. </li>
+        <ul>
+          <li>Clique em "Gerenciamento de Vendas" para visualizar as opções</li>
+          <li>Clique em "Vendas"</li>
+          <li>Em seguida, clique em "Manutenção de vendas" para visualizar suas vendas registradas</li>
+          <li>Para adicionar uma nova venda, clique em "Nova Venda".</li>
+          <li>Para visualizar as informações da vendarealizada, clique em "Visualizar".</li>
+          <li>Você pode editar ou excluir vendas a qualquer momento na seção de vizualização de vendas.</li>
+        </ul>
+        
+    </ol>
+
+    <p>Aproveite o Sistema de Controle de Vendas para manter suas vendas organizadas e bem gerenciadas. Se você tiver alguma dúvida, consulte a seção de ajuda ou entre em contato com o suporte.</p>
+  </section> 
+    })
+
+})
