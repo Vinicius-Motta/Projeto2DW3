@@ -1,7 +1,7 @@
 # Trabalho Prático 2 - Desenvolvimento Web III
-<img src="vendas.png" alt="Imagem Finanças" style="width: 100%;">
-<img src="TabelaVendas.png" alt="Imagem Finanças" style="width: 100%;">
-<img src="TabelaVendedores.png" alt="Imagem Finanças" style="width: 100%;">
+<img src="vendas.png" alt="Imagem Vendas" style="width: 100%;">
+<img src="TabelaVendas.png" alt="Imagem Tabela Vendas" style="width: 100%;">
+<img src="TabelaVendedores.png" alt="Imagem Tabela Vendedores" style="width: 100%;">
 
 ## Grupo
 
