@@ -2,7 +2,8 @@
 
 ## Grupo
 
-- [Inserir nomes dos membros do grupo]
+- [Hiago Henrique Tofanelli]
+- [Vinicius Bertoldi Motta]
 
 ## Pontuação Atual
 
