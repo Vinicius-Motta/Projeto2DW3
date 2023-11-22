@@ -1,5 +1,6 @@
 # Trabalho Prático 2 - Desenvolvimento Web III
 <img src="imagem vendas.png" alt="Imagem Finanças" style="width: 100%;">
+
 ## Grupo
 
 - Hiago Henrique Tofanelli
