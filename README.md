@@ -2,8 +2,8 @@
 
 ## Grupo
 
-- [Hiago Henrique Tofanelli]
-- [Vinicius Bertoldi Motta]
+- Hiago Henrique Tofanelli
+- Vinicius Bertoldi Motta
 
 ## Pontuação Atual
 
