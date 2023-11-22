@@ -1,4 +1,4 @@
-### teste de buscar todos os alunos
+### teste de buscar todos as vendas
 GET http://localhost:40000/GetAllVendedores HTTP/1.1
 content-type: application/json
 //Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzQ3ODI5NzksInVzZXJuYW1lIjoicXdlIn0.SlYYCm8J6wlpb3i1jJcSvhSz6VjwKvzPOxza8P6-hzo
@@ -7,7 +7,7 @@ content-type: application/json
     
 }
 
-### teste de buscar aluno por ID
+### teste de buscar venda por ID
 POST http://localhost:40000/GetVendedorByID HTTP/1.1
 content-type: application/json
 //Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzQ3ODI5NzksInVzZXJuYW1lIjoicXdlIn0.SlYYCm8J6wlpb3i1jJcSvhSz6VjwKvzPOxza8P6-hzo
@@ -16,7 +16,7 @@ content-type: application/json
     "vendedorid": 1
 }
 
-### teste de inserção de aluno
+### teste de inserção de venda
 POST http://localhost:40000/InsertVendedores HTTP/1.1
 content-type: application/json
 //Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzM0ODE2NDEsInVzZXJuYW1lIjoicXdlIn0.LRKs8uvt-SJ9E9dMGYRkCs7HhMDlqVmwap_zcaoONeQ
@@ -24,12 +24,12 @@ content-type: application/json
 {    
     "vendedorid": 0,
     "codigo": "1",
-    "nome": "fuzita",
+    "nome": "Hiago",
     "ativo": true,
     "deleted": false    
 }
 
-### teste de atualização de aluno
+### teste de atualização de venda
 POST http://localhost:40000/UpdateVendedores HTTP/1.1
 content-type: application/json
 //Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzM0ODE2NDEsInVzZXJuYW1lIjoicXdlIn0.LRKs8uvt-SJ9E9dMGYRkCs7HhMDlqVmwap_zcaoONeQ
@@ -37,12 +37,12 @@ content-type: application/json
 {    
     "vendedorid": 1,
     "codigo": "2",
-    "nome": "japones",
+    "nome": "Vinicius",
     "ativo": true,
     "deleted": false 
 }
 
-### teste de atualização de aluno
+### teste de atualização de venda
 POST http://localhost:40000/DeleteVendedores HTTP/1.1
 content-type: application/json
 //Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzM0ODE2NDEsInVzZXJuYW1lIjoicXdlIn0.LRKs8uvt-SJ9E9dMGYRkCs7HhMDlqVmwap_zcaoONeQ
