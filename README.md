@@ -58,29 +58,24 @@ Um programador está implementando um determinado módulo para o sistema ERP. Pa
 
 - Para cada API do back-end, deve ser criada uma respectiva função no front-end que usará a API.
 - Deverá haver controle de sessão de usuário logado.
+  
+| ## Avaliação do Trabalho                  | Pontuação Perdida                   |
+|-------------------------------------------|-------------------------------------|
+| **Sobre o Repositório Remoto**            |                                     |
+| 1. (5,0 pontos) Não postar no Moodle o link do trabalho repositório remoto.  | 5,0 pontos                            |
+|                                           |                                     |
+| **Sobre o Software**                      |                                     |
+| 1. (10 pontos) Criar as 05 APIs para cada tabela no back-end de acordo com as orientações definidas na seção regras de negócio. | 10,0 pontos                            |
+| 2. (06 pontos) Criar as 05 funções para cada tabela no front-end referentes às APIs. | 6,0 pontos                            |
+| 3. (04 pontos) Criar a tela de login.     | 4,0 pontos                            |
+| 4. (02 pontos) Criar controle de sessão.  | 2,0 pontos                            |
+| 5. (04 pontos) Criar mecanismo de segurança JWT ou semelhante. | 4,0 pontos                            |
+| 6. (07 pontos) Criar repositório no GitHub.| 7,0 pontos                            |
+|                                           |                                     |
+| **Sobre o Seminário**                     |                                     |
+| - Apresentação até 15 minutos.            |                                     |
+| - Forma de avaliação: Serão descontados os seguintes pontos: |                                     |
+|   - Passar o tempo limite: 0,2 ponto por minuto a mais. |                                     |
+|   - Vestimenta inapropriada: chinelo de dedo, bermuda, camiseta cavada. | Perde 3,0 pontos.                      |
 
-## Avaliação do Trabalho
 
-### Sobre o Repositório Remoto
-
-O grupo perderá a pontuação normalizada indicada na questão.
-
-1. (5,0 pontos) Não postar no Moodle o link do trabalho repositório remoto.
-
-### Sobre o Software
-
-O grupo perderá a pontuação normalizada indicada na questão.
-
-1. (10 pontos) Criar as 05 APIs para cada tabela no back-end de acordo com as orientações definidas na seção regras de negócio.
-2. (06 pontos) Criar as 05 funções para cada tabela no front-end referentes às APIs.
-3. (04 pontos) Criar a tela de login.
-4. (02 pontos) Criar controle de sessão.
-5. (04 pontos) Criar mecanismo de segurança JWT ou semelhante.
-6. (07 pontos) Criar repositório no GitHub.
-
-### Sobre o Seminário
-
-- Apresentação até 15 minutos.
-- Forma de avaliação: Serão descontados os seguintes pontos:
-  - Passar o tempo limite: 0,2 ponto por minuto a mais.
-  - Vestimenta inapropriada: chinelo de dedo, bermuda, camiseta cavada. Perde 3,0 pontos.
