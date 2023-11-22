@@ -7,7 +7,7 @@ create table IF NOT EXISTS vendedores (
 );
 
 create table IF NOT EXISTS vendas (
-    vendasid bigserial constraint pk_alunos PRIMARY KEY,
+    vendasid bigserial constraint pk_vendas PRIMARY KEY,
     codigodebarras varchar(20) UNIQUE,
     produto varchar(50),
     descricao VARCHAR(60),
